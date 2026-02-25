@@ -555,7 +555,8 @@
   @media (max-width: 900px) {
     nav { padding: 20px 24px; }
     .page { padding: 100px 6vw 60px 6vw; align-items: flex-start; }
-    #home.page { padding-top: 0; padding-bottom: 0; }
+    /* Home: keep some top gap under navbar on mobile */
+    #home.page { padding-top: 100px; padding-bottom: 40px; }
     .hero-title { font-size: clamp(88px, 18vw, 160px); }
     #about .about-layout { grid-template-columns: 1fr; gap: 32px; }
     .about-stats { gap: 1px; }
