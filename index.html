@@ -88,12 +88,6 @@
     border-bottom: 1px solid transparent;
     transition: border-color 0.4s, backdrop-filter 0.4s;
   }
-  nav.scrolled {
-    border-color: var(--border);
-    backdrop-filter: blur(20px);
-    background: rgba(7,7,9,0.6);
-  }
-
   .nav-logo {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 22px;
@@ -994,20 +988,6 @@ function animateCursor() {
 }
 animateCursor();
 
-/* ──────────────────────────────
-   NAV SCROLL STYLE (not actually scrolling, just aesthetic)
-   ────────────────────────────── */
-// Trigger nav scrolled style after first navigation
-function updateNav() {
-  const nav = document.getElementById('main-nav');
-  nav.classList.toggle('scrolled', currentPage !== 'home');
-}
-
-const origNavigateTo = navigateTo;
-window.navigateTo = function(id) {
-  origNavigateTo(id);
-  setTimeout(updateNav, 500);
-};
 </script>
 </body>
 </html>14:29 25.02.2026
